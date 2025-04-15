@@ -22,35 +22,23 @@
     </ul>
     
 
-    <form id="buscadorRopa">
-        <label for="buscadorInput"></label>
-        <input type="text" id="buscadorInput" name="buscadorInput">
-        <button type="submit" id="btn-buscar"><i class="fas fa-search"></i> Buscar
-        </button>
-    </form>
+    <div id="searchContainer">
+        <input type="text" id="searchRopa" placeholder="Buscar indumentaria">
+        <button id="buscarRopa">Buscar</button>
+    </div>
+    
 
 
     <div class="two columns u-pull-right">
-        <ul>
-            <li class="submenu">
-                    <img src="img/carro-de-la-compra.png" id="img-carrito">
-                    <div id="carrito">
-                            
-                            <table id="lista-carrito" class="u-full-width">
-                                <thead>
-                                    <tr>
-                                        <th>Imagen</th>
-                                        <th>Nombre</th>
-                                        <th>Precio</th>
-                                        <th>Cantidad</th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody></tbody>
-                            </table>
-
-                            <a href="#" id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</a>
-                    </div>
+    <ul>
+        <li class="submenu">
+            <!-- Cambia la imagen del carrito a un enlace -->
+            <a href="carrito.php">
+                <img src="img/carro-de-la-compra.png" id="img-carrito" alt="Carrito de Compras">
+            </a>
+        </li>
+    </ul>
+</div>
                 </header>
 
              
@@ -71,7 +59,7 @@
                     </div>
                 </section>
 
-                <section class="productos">
+                <!-- <section class="productos">
                     <div class="producto">
                         <img src="img/1283521-1000-1000.webp" alt="Nike Swoosh">
                         <h3>Nike Swoosh</h3>
@@ -107,7 +95,7 @@
                         <p class="precio">$199.999</p>
                         <a href="#" class="btn-comprar">Comprar</a>
                     </div>
-                </section>
+                </section> -->
 
                 <section id="encuentrate">
                     <h2>Encuentra lo que buscas</h2>
@@ -148,7 +136,7 @@
                 </div>
                 
                 <div class="tu-equipo">
-                    <h2 class="coleccion">Encontra tu equipo</h2>
+                    <h2 class="tu-equipoLg">Encontra tu equipo</h2>
                     <div class="logos">
                     <a href="https://www.adidas.com.ar/argentina-hombre" target="_blank"><img src="https://brand.assets.adidas.com/image/upload/f_auto,q_auto:best,fl_lossy/if_w_gt_150,w_150/afa_picker_d_4bb4f2bd82.png"></a>
 

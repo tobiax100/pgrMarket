@@ -16,7 +16,8 @@ while ($row = $result->fetch_assoc()) {
     echo "<p class='descripcion'>" . $row['descripcion'] . "</p>";
     echo "<img src='" . $row['img_producto'] . "' alt='" . $row['nombre_producto'] . "'>";
     echo "<p class='precio'>Precio: $" . $row['precio'] . "</p>";
-    echo "<a href='#' class='btn-comprar'>COMPRAR AHORA</a>";
+    echo "<a href='#' class='comprar-btn'>COMPRAR AHORA</a>"."<br>";
+    echo "<a href='#' class='btn-comprar agregar-carrito'>Agregar al Carrito</a>";
     echo "</div>";
 }
 echo "</div>"; 

@@ -1,0 +1,77 @@
+
+#carrito {
+    width: 100%;
+    max-width: 800px; /* Ajusta el ancho según tu diseño */
+    margin: 20px auto; /* Centrado en la página */
+    background-color: #fff; /* Fondo blanco para destacar los elementos */
+    border: 1px solid #ddd; /* Borde fino */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+    padding: 20px;
+    font-family: 'Arial', sans-serif; /* Fuente moderna y legible */
+}
+
+/* Encabezados de la tabla */
+#lista-carrito thead th {
+    background-color: #f4f4f4; /* Fondo gris claro para encabezados */
+    color: #333; /* Texto oscuro */
+    padding: 10px;
+    text-align: center; /* Centra el texto */
+    font-size: 1rem;
+}
+
+/* Filas de la tabla */
+#lista-carrito tbody tr {
+    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+}
+
+#lista-carrito tbody tr:hover {
+    background-color: #f8f8f8; /* Fondo resaltado al pasar el cursor */
+}
+
+/* Celdas de la tabla */
+#lista-carrito td {
+    padding: 10px;
+    text-align: center;
+}
+
+/* Imagen dentro de la tabla */
+#lista-carrito td img {
+    width: 50px; /* Tamaño adecuado para mostrar el producto */
+    border-radius: 4px; /* Suaviza bordes de la imagen */
+}
+
+/* Botón eliminar producto */
+.borrar-producto {
+    background-color: #ff4d4d; /* Rojo llamativo */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.borrar-producto:hover {
+    background-color: #cc0000; /* Rojo más oscuro al pasar el cursor */
+}
+
+/* Botón de vaciar carrito */
+#vaciar-carrito {
+    display: block;
+    width: 100%;
+    background-color: #007bff; /* Azul llamativo */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none; /* Elimina subrayado */
+}
+
+#vaciar-carrito:hover {
+    background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+}
