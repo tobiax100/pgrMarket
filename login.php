@@ -15,6 +15,6 @@
         <?php 
         include("registrar.php");
         ?>
-		//este login no le den bola pq era para chamuyar al profe y lo vi de un tutorial de soy dalto
+		
 </body>
 </html>

@@ -29,7 +29,7 @@
         </button>
     </form>
 
-    //borren este carrito, no lo hago yo porque soy re piola
+
     <div class="two columns u-pull-right">
         <ul>
             <li class="submenu">
@@ -53,7 +53,7 @@
                     </div>
                 </header>
 
-                //cards creadas al re pedo pq no habia conectado la base de datos
+             
                 <section class="coleccion" id="coleccion">
                     <h2>ENCONTRÁ POR CATEGORÍAS</h2>
                     <div class="buttons">
@@ -143,10 +143,10 @@
                 </section>
 
                 <div id="products">
-                    //aca se ponen los productos de la base de datos
+                  
                     <?php include 'mostrar_productos.php'; ?>
                 </div>
-                //NO LE DEN BOLA A ESTO QUE ERA PARA DECORACION MAS QUE NADA, DESPUES LO VEO BIEN
+                
                 <div class="tu-equipo">
                     <h2 class="coleccion">Encontra tu equipo</h2>
                     <div class="logos">
