@@ -31,29 +31,27 @@ header ul li a {
     font-weight: bold;
 }
 
-/* Contenedor del buscador */
 #searchContainer {
     display: flex;
     align-items: center;
-    justify-content: center; /* Centra el buscador horizontalmente */
-    gap: 10px; /* Espacio entre el input y el botón */
-    margin: 20px auto; /* Centrado general */
+    justify-content: center; 
+    gap: 10px; 
+    margin: 20px auto;
 }
 
-/* Input de búsqueda */
 #searchRopa {
-    padding: 10px 15px; /* Espaciado interno */
-    border: 2px solid #000; /* Borde negro para destacar */
-    border-radius: 25px; /* Bordes redondeados */
-    font-size: 16px; /* Tamaño legible */
-    color: #333; /* Texto gris oscuro */
-    background-color: #fff; /* Fondo blanco */
-    outline: none; /* Quita el borde al hacer clic */
-    transition: border-color 0.3s ease; /* Efecto suave */
+    padding: 10px 15px;
+    border: 2px solid #000; 
+    border-radius: 25px; 
+    font-size: 16px; 
+    color: #333; 
+    background-color: #fff;
+    outline: none; 
+    transition: border-color 0.3s ease; 
 }
 
 #searchRopa:focus {
-    border-color: #007bff; /* Destaca el borde al estar activo */
+    border-color: #007bff; 
 }
 
 /* Boton de busqueda */
