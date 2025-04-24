@@ -1,3 +1,9 @@
+h1{
+    text-align: center;
+    background: linear-gradient(to right ,#30cfD0 0%, #330867);
+    background-clip: text;
+    color: transparent;
+}
 
 #carrito {
     width: 100%;

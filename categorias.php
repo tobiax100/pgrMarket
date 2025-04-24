@@ -2,7 +2,7 @@
 
 $conexion = new mysqli('localhost','root','messi','marketdb');
 $id_categoria = 1;
-$query = $conexion->prepare("SELECT nombre_producto, precio, img_producto 
+$query = $conexion->prepare("SELECT nombre_producto,productos.descripcion,precio, img_producto
                              FROM productos 
                              INNER JOIN categorias 
                              ON productos.id_categoria = categorias.id_categoria 
@@ -10,6 +10,7 @@ $query = $conexion->prepare("SELECT nombre_producto, precio, img_producto
 $query->bind_param("i", $id_categoria);
 $query->execute();
 
+$result=$query->get_result();
 
 while ($row = $result->fetch_assoc()) {
     echo "<div class='card'>"; 
@@ -22,4 +23,6 @@ while ($row = $result->fetch_assoc()) {
     echo "</div>";
 }
 
+$query->close();
+$conexion->close();
 ?>

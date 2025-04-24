@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="carrito.css"> <!-- Enlace a tus estilos -->
+    <link rel="stylesheet" href="./css/carrito.css"> <!-- Enlace a tus estilos -->
     <title>Carrito de Compras</title>
 </head>
 <body>
     <header>
-        <h1 style="text-align: center;">Carrito de Compras</h1>
+        <h1>Carrito de Compras</h1>
     </header>
     <main>
         <table id="lista-carrito" class="u-full-width">
