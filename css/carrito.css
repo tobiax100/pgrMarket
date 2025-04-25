@@ -7,49 +7,48 @@ h1{
 
 #carrito {
     width: 100%;
-    max-width: 800px; /* Ajusta el ancho según tu diseño */
-    margin: 20px auto; /* Centrado en la página */
-    background-color: #fff; /* Fondo blanco para destacar los elementos */
-    border: 1px solid #ddd; /* Borde fino */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra ligera para profundidad */
+    max-width: 800px; 
+    margin: 20px auto; 
+    background-color: #fff;
+    border: 1px solid #ddd; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    font-family: 'Arial', sans-serif; /* Fuente moderna y legible */
+    font-family: 'Arial', sans-serif; 
 }
 
-/* Encabezados de la tabla */
+
 #lista-carrito thead th {
-    background-color: #f4f4f4; /* Fondo gris claro para encabezados */
-    color: #333; /* Texto oscuro */
+    background-color: #f4f4f4; 
+    color: #333; 
     padding: 10px;
-    text-align: center; /* Centra el texto */
+    text-align: center; 
     font-size: 1rem;
 }
 
-/* Filas de la tabla */
 #lista-carrito tbody tr {
-    border-bottom: 1px solid #ddd; /* Línea divisoria entre filas */
+    border-bottom: 1px solid #ddd;
 }
 
 #lista-carrito tbody tr:hover {
-    background-color: #f8f8f8; /* Fondo resaltado al pasar el cursor */
+    background-color: #f8f8f8; 
 }
 
-/* Celdas de la tabla */
+
 #lista-carrito td {
     padding: 10px;
     text-align: center;
 }
 
-/* Imagen dentro de la tabla */
+
 #lista-carrito td img {
-    width: 50px; /* Tamaño adecuado para mostrar el producto */
-    border-radius: 4px; /* Suaviza bordes de la imagen */
+    width: 50px;
+    border-radius: 4px; 
 }
 
 /* Botón eliminar producto */
 .borrar-producto {
-    background-color: #ff4d4d; /* Rojo llamativo */
+    background-color: #ff4d4d;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -59,14 +58,14 @@ h1{
 }
 
 .borrar-producto:hover {
-    background-color: #cc0000; /* Rojo más oscuro al pasar el cursor */
+    background-color: #cc0000; 
 }
 
 /* Botón de vaciar carrito */
 #vaciar-carrito {
     display: block;
     width: 100%;
-    background-color: #007bff; /* Azul llamativo */
+    background-color: #007bff; 
     color: white;
     text-align: center;
     padding: 10px;
@@ -75,9 +74,9 @@ h1{
     font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    text-decoration: none; /* Elimina subrayado */
+    text-decoration: none;
 }
 
 #vaciar-carrito:hover {
-    background-color: #0056b3; /* Azul más oscuro al pasar el cursor */
+    background-color: #0056b3; 
 }

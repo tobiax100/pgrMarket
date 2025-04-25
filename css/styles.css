@@ -31,6 +31,8 @@ header ul li a {
     font-weight: bold;
 }
 
+
+
 #searchContainer {
     display: flex;
     align-items: center;
@@ -72,6 +74,38 @@ header ul li a {
     transform: scale(1.05);
 }
 
+#loginUser {
+    padding: 10px 35px 10px;
+    text-decoration: none;
+    background-color: #16E000;
+    color: #fff; 
+    font-size: 16px; 
+    font-weight: bold; 
+    border: none; 
+    border-radius: 20px;
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#loginUser:hover{
+    background-color: #18F500;    
+}
+
+.containerLogin {
+    position: relative;
+}
+
+.containerLogin i {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+
+
 
 #img-carrito {
     width: 30px;
@@ -95,32 +129,6 @@ header ul li a {
 }
 
 
-.two.columns.u-pull-right:hover #carrito {
-    display: block; 
-}
-
-#lista-carrito {
-    width: 100%;
-    border-collapse: collapse;
-}
-
-#lista-carrito th, #lista-carrito td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-#vaciar-carrito {
-    display: block;
-    margin-top: 15px;
-    text-align: center;
-    background-color: #000;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
 
 .coleccion {
     text-align: center;
@@ -366,16 +374,11 @@ header ul li a {
 
 /* Contenedor principal */
 .tu-equipo {
-    width: 100%;
-    height: 70vh; 
-    background-image: url('/img/correnikexd.webp');
-    background-size: contain; 
-    background-repeat: no-repeat; 
-    background-position: center; 
+    background: url('/webcompras/img/correnikexd.webp') no-repeat;
+    background-size: cover; 
     display: flex;
     justify-content: center;
     position: relative;
-    align-items: center;
     background-color: #e5e5e5;
 }
 
@@ -420,3 +423,112 @@ header ul li a {
     z-index: 10; 
 }
 
+
+
+.welcome-text {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.logout-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button:hover {
+    background-color: #0056b3;
+}
+
+/*estilos del usuario logeado*/
+.welcome-text {
+    font-size: 24px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.logout-button {
+    display: inline-block;
+    padding: 3.5px 10px;
+    background-color: #ff0f0f;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.logout-button:hover {
+    background-color: #ffb730;
+}
+
+.footer-basic {
+    padding:40px 0;
+    background-color:#adabab;
+    color:#4b4c4d;
+  }
+  
+  .footer-basic ul {
+    padding:0;
+    list-style:none;
+    text-align:center;
+    font-size:18px;
+    line-height:1.6;
+    margin-bottom:0;
+  }
+  
+  .footer-basic li {
+    padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+    opacity:1;
+  }
+  
+  .footer-basic .social {
+    text-align:center;
+    padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+    font-size:24px;
+    width:40px;
+    height:40px;
+    line-height:40px;
+    display:inline-block;
+    text-align:center;
+    border-radius:50%;
+    border:1px solid #ffffff;
+    margin:0 8px;
+    color:inherit;
+    opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+    opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+    margin-top:15px;
+    text-align:center;
+    font-size:13px;
+    color:#aaa;
+    margin-bottom:0;
+  }

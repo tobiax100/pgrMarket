@@ -1,9 +1,23 @@
+<?php
+session_start();
+if (isset($_SESSION['user_name'])) {
+    $userName = $_SESSION['user_name'];
+    $welcomeMessage = "<h1 class='welcome-text'>Bienvenido, " . htmlspecialchars($userName) . "!</h1>";
+    $logoutButton = '<a href="/webcompras/logout.php" class="logout-button">Cerrar sesión</a>';
+} else {
+    $welcomeMessage = "<h1 class='welcome-text'>Bienvenido!</h1>";
+    $logoutButton = '';
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="img/icons8-copyright-de-grabación-de-sonido-50.png" type="image/x-icon">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="./css/styles.css">
     <script src="main.js"></script>
     <title>PGR market place</title>
@@ -11,35 +25,40 @@
 </head>
 <body>
     <header>
-    <ul>
-        <!-- <li><img src="img/icons8-copyright-de-grabación-de-sonido-50.png"><a href="youtube.com"></a></li> -->
-        <li><a href="">Nuevos</a></li>
-        <li><a href="">Mujeres</a></li>
-        <li><a href="">Niños</a></li>
-        <li><a href="">Deportes</a></li>
-        <li><a href="">Colecciones</a></li>
-        <li><a href="">Outlet</a></li>
-    </ul>
+        <?php echo $welcomeMessage; ?>
+        <?php echo $logoutButton; ?>
+        
+        <nav aria-label="Categorias de Productos">
+            <ul>
+                <li><a href="">Nuevos</a></li>
+                <li><a href="">Mujeres</a></li>
+                <li><a href="">Niños</a></li>
+                <li><a href="">Deportes</a></li>
+                <li><a href="">Colecciones</a></li>
+                <li><a href="">Outlet</a></li>
+            </ul>
+        </nav>
     
-
-    <div id="searchContainer">
-        <input type="text" id="searchRopa" placeholder="Buscar indumentaria">
-        <button id="buscarRopa">Buscar</button>
-    </div>
+        <div id="searchContainer">
+            <input type="text" id="searchRopa" placeholder="Buscar indumentaria">
+            <button id="buscarRopa">Buscar</button>
+        </div>
     
+        <div class="containerLogin">
+            <a id="loginUser" href="/webCompras/login/register.php" target="_blank">Log</a>
+            <i class='bx bxl-google'></i>
+        </div>
 
-
-    <div class="two columns u-pull-right">
-    <ul>
-        <li class="submenu">
-            <!-- Cambia la imagen del carrito a un enlace -->
-            <a href="carrito.php">
-                <img src="img/carro-de-la-compra.png" id="img-carrito" alt="Carrito de Compras">
-            </a>
-        </li>
-    </ul>
-</div>
-                </header>
+        <div class="two columns u-pull-right">
+            <ul>
+                <li class="submenu">
+                    <a href="carrito.php">
+                        <img src="img/carro-de-la-compra.png" id="img-carrito" alt="Carrito de Compras">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
 
              
                 <section class="coleccion" id="coleccion">
@@ -59,43 +78,6 @@
                     </div>
                 </section>
 
-                <!-- <section class="productos">
-                    <div class="producto">
-                        <img src="img/1283521-1000-1000.webp" alt="Nike Swoosh">
-                        <h3>Nike Swoosh</h3>
-                        <p class="descripcion">Campera de Moda para Hombre</p>
-                        <p class="precio">$259.999</p>
-                        <a href="#" class="btn-comprar">Comprar</a>
-                    </div>
-                    <div class="producto">
-                        <img src="img/135d92f1-2182-4625-a36f-93ba2e88cc0e___e4f45870707b3b6d094cf3236a31d9eb.webp" alt="Nike Sportswear Phoenix Fleece">
-                        <h3>Nike Sportswear Phoenix Fleece</h3>
-                        <p class="descripcion">Pantalón de Moda para Mujer</p>
-                        <p class="precio">$119.999</p>
-                        <a href="#" class="btn-comprar">Comprar</a>
-                    </div>
-                    <div class="producto">
-                        <img src="img/817932-1000-1000.webp" alt="Nike Tech Reimagined">
-                        <h3>Nike Tech Reimagined</h3>
-                        <p class="descripcion">Buzo Con Capucha de Moda para Hombre</p>
-                        <p class="precio">$219.999</p>
-                        <a href="#" class="btn-comprar">Comprar</a>
-                    </div>
-                    <div class="producto">
-                        <img src="img/a7029e45-fea7-4f72-aa6b-547e012b997e___4260a001faf97609d94c13684f34208a.webp" alt="Nike Tech">
-                        <h3>Nike Tech</h3>
-                        <p class="descripcion">Pantalón de Moda para Hombre</p>
-                        <p class="precio">$219.999</p>
-                        <a href="#" class="btn-comprar">Comprar</a>
-                    </div>
-                    <div class="producto">
-                        <img src="img/1237004-1000-1000.webp" alt="Nike Wool Classics">
-                        <h3>Nike Wool Classics</h3>
-                        <p class="descripcion">Pantalón de Moda para Hombre</p>
-                        <p class="precio">$199.999</p>
-                        <a href="#" class="btn-comprar">Comprar</a>
-                    </div>
-                </section> -->
 
                 <section id="encuentrate">
                     <h2>Encuentra lo que buscas</h2>
@@ -157,8 +139,21 @@
 
                 <div class="nike">
                     <?php  include 'categorias.php'; ?>
-
                 </div>
 
+                <div class="footer-basic">
+                  <footer>
+                        <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
+                            <ul class="list-inline">
+                                <li class="list-inline-item"><a href="#coleccion">Home</a></li>
+                                <li class="list-inline-item"><a href="#">Servicios</a></li>
+                                <li class="list-inline-item"><a href="#">sobre nosotros</a></li>
+                                <li class="list-inline-item"><a href="#">Terminos y condiciones</a></li>
+                                <li class="list-inline-item"><a href="#">Politica y privacidad</a></li>
+                            </ul>
+                            <p class="copyright">PGR Company © 2025</p>
+                  </footer>  
+                </div>
+                
 </body>
 </html>
