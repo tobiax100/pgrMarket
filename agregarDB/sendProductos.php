@@ -34,6 +34,7 @@ if (isset($_POST['enviar'])) {
 
       if($consulta->execute()){
         echo '<h3 class="ok">¡Producto enviado a la base de datos!</h3>';
+        header("Location: /webcompras/agregarDB/sendProductosform.php");
       }else{
         echo '<h3 class="bad">Error el enviar el producto a la base de datos!</h3>';
       }

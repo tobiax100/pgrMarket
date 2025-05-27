@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -27,10 +26,15 @@ header ul li {
 
 header ul li a {
     color: #fff;
-    text-decoration: none;
     font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
+header a:hover{
+    color: #0056b3;
+    text-decoration:underline;
+}
 
 
 #searchContainer {
@@ -215,7 +219,7 @@ header ul li a {
 
 
 /* PRUEBA DE CARDS PARA LA DATABASE */
-
+/* 
 .productos {
     display: flex;
     flex-wrap: wrap;
@@ -268,7 +272,7 @@ header ul li a {
     font-weight: bold;
     color: #000;
     margin-bottom: 15px;
-}
+} */
 
 
 .btn-comprar {
@@ -288,7 +292,9 @@ header ul li a {
 
 
 #encuentrate {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 20px;
     background-color: #f9f9f9;
 }
@@ -301,74 +307,18 @@ header ul li a {
 }
 
 
-.card-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; 
-    padding: 10px;
-}
+/*cards estilo abajo*/
 
 
-.card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    width: 250px;
-    text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
 
-.card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-
-.card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-
-.card h3 {
-    font-size: 18px;
-    color: #333;
-    margin-bottom: 5px;
-}
-
-
-.card .descripcion {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-
-.comprar-btn {
-    display: inline-block;
-    text-decoration: none;
-    color: #000000;
-    font-weight: bold;
-    text-decoration:underline;
-    transition: background-color 0.3s ease;
-}
-
-.comprar-btn:hover {
-    background-color: #d0cfcf;
-}
-
-
-.product-db{
+/* .product-db{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
     padding: 20px;
     background-color: #f4f4f4;
-}
+} */
 
 
 
@@ -446,7 +396,8 @@ header ul li a {
 }
 
 .logout-button:hover {
-    background-color: #0056b3;
+    color: #fff;
+    text-decoration: none;
 }
 
 /*estilos del usuario logeado*/
@@ -531,4 +482,145 @@ header ul li a {
     font-size:13px;
     color:#aaa;
     margin-bottom:0;
-  }
+  } 
+
+  
+ /*codigo simon css : */
+
+
+
+
+/* Posicionar los botones sobre el carrusel */
+#prevBtn, #nextBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    padding: 14px 19px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+/* Posiciones específicas */
+#prevBtn {
+    left: 20px;
+}
+
+#nextBtn {
+    right: 20px;
+}
+
+/* Carrusel completo con más espacio */
+#carrusel {
+    margin: 60px 0;
+    padding: 30px 0;
+}
+
+/* Contenedor más alto y centrado */
+.carrusel-container {
+    max-width: 1400px;
+    height: 520px; /* MÁS ALTO */
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+/* Scroll horizontal solo */
+.carrusel-items {
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+    height: 100%;
+}
+
+/* Tarjetas mucho más grandes y estilizadas */
+.card {
+    min-width: 300px;
+    max-width: 300px;
+    height: 460px; /* MÁS ALTA */
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+    border-radius: 15px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.03); /* Leve agrandamiento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); /* Sombra flotante */
+}
+
+/* Imagen más visible */
+.card img {
+    height: 180px;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+/* Texto y botones */
+.card h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.card p.precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.comprar-btn {
+    display: inline-block;
+    text-decoration: underline;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.btn-comprar {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.notificacion-carrito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+#contador-carrito {
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 6px;
+    font-size: 12px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}

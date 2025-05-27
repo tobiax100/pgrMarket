@@ -21,10 +21,12 @@ if (isset($_POST['user_name'])) {
             session_start(); 
             $_SESSION['email'] = $email; 
             $_SESSION['user_name']= $row['user_name'];
-            header("Location: /webcompras/index.php"); // una vez que se verifico la contraseña y mail te manda a la pag princ
+            header("Location: /webcompras/index.php"); //se verifica la contraseña y redirije al index
             exit(); 
         } else {
-            echo '<h3 class="bad">Contraseña equivocada.</h3>';
+            $_SESSION['error'] = "CONTRASEÑA EQUIVOCADA PELOTUDO"; //si sale error muestra esto
+            header("Location: /webcompras/login/login.php"); 
+            exit();
         }
     } else {
         echo '<h3 class="bad">Usuario no encontrado.</h3>';
