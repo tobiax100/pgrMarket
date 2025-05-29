@@ -3,7 +3,7 @@ session_start();
 if (isset($_SESSION['user_name'])) {
     $userName = $_SESSION['user_name'];
     $welcomeMessage = "<h1 class='welcome-text'>Bienvenido, " . htmlspecialchars($userName) . "!</h1>";
-    $logoutButton = '<a href="/webcompras/logout.php" class="logout-button">Cerrar sesión</a>';
+    $logoutButton = '<a href="/webcompras/login/logout.php" class="logout-button">Cerrar sesión</a>';
 } else {
     $welcomeMessage = "<h1 class='welcome-text'>Bienvenido!</h1>";
     $logoutButton = '';
@@ -31,13 +31,26 @@ if (isset($_SESSION['user_name'])) {
 
 
     <div class="productosDb">
+        <h3>Todos Los Productos</h3>
         <?php include './databaseProducts/mostrar_productos.php'; ?>
     </div>
 
 
     <div class="productosDb">
+        <h3>Nike</h3>
         <?php  include './databaseProducts/categorias.php'; ?>
     </div>
+
+    <div class="productosDb">
+        <h3>Adidas</h3>
+        <?php include './databaseProducts/adidas.php' ?>
+    </div>
+
+    <div class="productosDb">
+        <?php include './components/sectionTeam.php' ?>
+    </div>
+
+
 
     <footer>
         <?php include './components/footer.php'  ?>

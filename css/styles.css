@@ -624,3 +624,32 @@ header a:hover{
     top: 20px;
     right: 20px;
 }
+
+
+.productosDb h3 {
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    text-align: center;
+    letter-spacing: 1px;
+    padding-bottom: 10px;
+    margin: 30px auto;
+    position: relative;
+}
+
+.productosDb h3:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    transform: scaleX(50%);
+    transition: transform 0.3s ease;
+}
+
+.productosDb h3:hover:after {
+    transform: scaleX(1); 
+}
+

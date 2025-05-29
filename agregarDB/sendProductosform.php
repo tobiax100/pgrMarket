@@ -69,6 +69,7 @@ div {
                 <input type="text" name="imagen" placeholder="ingrese url img">
                 <input type="number" name="precio" placeholder="Precio del producto">
                 <input type="number" name="cantidad" placeholder="Stock del producto">
+                <input type="number" name="id" placeholder="id de la categoria">
                 <input type="submit" name="enviar" value="Enviar Producto">
         </form>
    </div> 

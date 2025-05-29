@@ -27,10 +27,11 @@ if (isset($_POST['enviar'])) {
     $img = htmlspecialchars($_POST['imagen']);
     $precio = filter_var($_POST['precio'], FILTER_VALIDATE_INT);
     $stock = filter_var($_POST['cantidad'], FILTER_VALIDATE_INT);
+    $id_categoria = filter_var($_POST['id'], FILTER_VALIDATE_INT);
 
 
-      $consulta = $conex->prepare("INSERT INTO productos(nombre_producto,descripcion,img_producto,precio,stock) VALUES(?,?,?,?,?)");
-      $consulta->bind_param("sssii",$name,$descripcion,$img,$precio,$stock);
+      $consulta = $conex->prepare("INSERT INTO productos(nombre_producto,descripcion,img_producto,precio,stock,id_categoria) VALUES(?,?,?,?,?,?)");
+      $consulta->bind_param("sssiii",$name,$descripcion,$img,$precio,$stock,$id_categoria);
 
       if($consulta->execute()){
         echo '<h3 class="ok">¡Producto enviado a la base de datos!</h3>';
